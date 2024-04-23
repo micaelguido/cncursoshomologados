@@ -6,20 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central Nacional de Cursos Homologados</title>
-    
-    <!-- Script do Google -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16499017819"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
 
-        gtag('config', 'AW-16499017819');
-    </script>
-    
     <style>
         /* Estilo para a página */
         body {
@@ -57,9 +44,28 @@
 <body>
     <!-- Adicionando a imagem da metade superior da bandeira do Brasil -->
     <img src="/imagem-bandeira-brasil.png" alt="Metade superior da bandeira do Brasil" style="margin-bottom: 20px;">
-    <a href="https://cncursoshomologados.mydurable.com/pt?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTM3NTM2NTcuODc6cHJldmlldw==" class="btn">
+    
+    <h1>Central Nacional de Cursos Homologados</h1>
+    
+    <!-- Botão com evento de clique -->
+    <a href="https://cncursoshomologados.mydurable.com/pt?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTM3NTM2NTcuODc6cHJldmlldw==" class="btn" id="btn-cursos" onclick="executeGoogleScript()">
         Acesse nossos Cursos
     </a>
+
+    <!-- Script para executar o código do Google no clique do botão -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16499017819"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        function executeGoogleScript() {
+            gtag('js', new Date());
+            gtag('config', 'AW-16499017819');
+        }
+    </script>
 </body>
 
 </html>

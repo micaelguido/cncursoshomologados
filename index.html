@@ -48,11 +48,11 @@
     <h1>Central Nacional de Cursos Homologados</h1>
     
     <!-- Botão com evento de clique -->
-    <a href="https://cncursoshomologados.mydurable.com/pt?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTM3NTM2NTcuODc6cHJldmlldw==" class="btn" id="btn-cursos" onclick="executeGoogleScript()">
+    <a href="https://cncursoshomologados.mydurable.com/pt?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTM3NTM2NTcuODc6cHJldmlldw==" class="btn" id="btn-cursos">
         Acesse nossos Cursos
     </a>
 
-    <!-- Script para executar o código do Google no clique do botão -->
+    <!-- Script para executar o código do Google assim que a página é carregada -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16499017819"></script>
     <script>
@@ -61,10 +61,9 @@
             dataLayer.push(arguments);
         }
 
-        function executeGoogleScript() {
-            gtag('js', new Date());
-            gtag('config', 'AW-16499017819');
-        }
+        // Executar o script do Google assim que a página é carregada
+        gtag('js', new Date());
+        gtag('config', 'AW-16499017819');
     </script>
 </body>
 

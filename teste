@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecionando...</title>
+    <style>
+        /* Estilo para alterar a cor de fundo e centralizar a imagem */
+        body {
+            background-color: #004298;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="imagem-bandeira-brasil.png" alt="Bandeira do Brasil" style="max-width: 50%; max-height: 50%;">
+    <script>
+        // Redireciona automaticamente para o URL especificado após um determinado tempo
+        setTimeout(() => {
+            window.location.href = "https://cncursoshomologados.mydurable.com/pt?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTM3NTM2NTcuODc6cHJldmlldw==";
+        }, 3000); // Ajuste o tempo em milissegundos, aqui está definido para 3 segundos
+    </script>
+</body>
+
+</html>

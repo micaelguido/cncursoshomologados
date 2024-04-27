@@ -25,11 +25,11 @@
         }
 
         header img {
-            height: 100px; /* Aumenta a altura da imagem "logo" duas vezes */
+            height: 100px;
         }
 
         /* Estilo de navegação e botão "Matricule-se" */
-        nav a {
+        nav a, nav button {
             color: white;
             text-decoration: none;
             margin: 0 10px;
@@ -41,12 +41,12 @@
         }
 
         header nav button {
-            padding: 15px 30px; /* Ajuste de padding para aumentar o tamanho do botão em 50% */
+            padding: 10px 20px;
             border: none;
             background-color: #FFC010;
             color: white;
             cursor: pointer;
-            font-size: 1.5rem; /* Aumente o tamanho da fonte para aumentar o botão em 50% */
+            font-size: 1rem;
         }
 
         header nav button:hover {
@@ -57,19 +57,18 @@
         main {
             text-align: center;
             padding: 50px;
-            margin: 0 80px; /* Aumenta as margens laterais 4 vezes (20px * 4 = 80px) */
+            margin: 0 auto; /* Alinha ao centro */
         }
 
-        /* Estilo do texto de apresentação */
         main h1 {
             color: black;
-            font-size: 2.5rem; /* Fonte maior para o título */
+            font-size: 2rem; /* Fonte maior para o título */
             margin-bottom: 20px;
         }
 
         main p {
             color: black;
-	    font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
         }
 
@@ -96,6 +95,38 @@
             color: white;
             padding: 20px;
             text-align: center;
+        }
+
+        /* Media queries para tornar o layout responsivo */
+        @media (max-width: 768px) {
+            /* Ajustes para telas menores */
+            header img {
+                height: 50px; /* Reduzir o tamanho da logo em telas menores */
+            }
+
+            header, main, footer {
+                padding: 10px;
+            }
+
+            nav a, nav button {
+                margin: 0 5px; /* Menor espaço entre links e botões */
+            }
+
+            main {
+                margin: 0; /* Remover margens laterais */
+            }
+
+            main h1 {
+                font-size: 1.5rem; /* Diminuir o tamanho da fonte */
+            }
+
+            main p {
+                font-size: 1rem; /* Diminuir o tamanho da fonte */
+            }
+
+            footer {
+                position: static; /* Evita que o rodapé fique fixo */
+            }
         }
     </style>
 </head>

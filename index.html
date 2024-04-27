@@ -1,30 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
     <meta charset="UTF-8">
-    <title>Redirecionando...</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Apresentação</title>
     <style>
-        /* Estilo para alterar a cor de fundo e centralizar a imagem */
+        /* Estilos gerais */
         body {
-            background-color: #004298;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('fundo.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        header img {
+            height: 100px; /* Aumenta a altura da imagem "logo" duas vezes */
+        }
+
+        /* Estilo de navegação e botão "Matricule-se" */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        header nav button {
+            padding: 15px 30px; /* Ajuste de padding para aumentar o tamanho do botão em 50% */
+            border: none;
+            background-color: #FFC010;
+            color: white;
+            cursor: pointer;
+            font-size: 1.5rem; /* Aumente o tamanho da fonte para aumentar o botão em 50% */
+        }
+
+        header nav button:hover {
+            background-color: #007BFF;
+        }
+
+        /* Estilo do corpo principal */
+        main {
+            text-align: center;
+            padding: 50px;
+            margin: 0 80px; /* Aumenta as margens laterais 4 vezes (20px * 4 = 80px) */
+        }
+
+        /* Estilo do texto de apresentação */
+        main h1 {
+            color: black;
+            font-size: 2.5rem; /* Fonte maior para o título */
+            margin-bottom: 20px;
+        }
+
+        main p {
+            color: black;
+	    font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        main button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #FFC010;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        main button:hover {
+            background-color: #007BFF;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            position: fixed; /* Ajuste para fixar o rodapé na parte inferior */
+            bottom: 0;
+            width: 100%; /* Largura total da página */
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
-
 <body>
-    <img src="imagem-bandeira-brasil.png" alt="Bandeira do Brasil" style="max-width: 50%; max-height: 50%;">
-    <script>
-        // Redireciona automaticamente para o URL especificado após um determinado tempo
-        setTimeout(() => {
-            window.location.href = "https://cncursoshomologados.mydurable.com/pt?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTM3NTM2NTcuODc6cHJldmlldw==";
-        }, 1000); // Ajuste o tempo em milissegundos, aqui está definido para 3 segundos
-    </script>
-</body>
 
+<header>
+    <img src="logo.png" alt="Logo">
+    <nav>
+        <a href="https://cncursoshomologados.mydurable.com/pt/formacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Formação</a>
+        <a href="https://cncursoshomologados.mydurable.com/pt/atualizacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Atualização</a>
+        <a href="https://cncursoshomologados.mydurable.com/pt/homologacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Homologação</a>
+        <a href="https://cncursoshomologados.mydurable.com/pt/contact?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Contato</a>
+        <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/matricula?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Matricule-se</button>
+    </nav>
+</header>
+
+<main>
+    <h1>Seu Futuro Agora Mesmo!</h1>
+    <p>Na Central Nacional de Cursos Homologados, oferecemos educação de qualidade com cursos especializados em transporte para impulsionar sua carreira de motorista profissional!.</p>
+    <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/matricula?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Matricule-se</button>
+    <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/homologacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Saiba mais sobre a Homologação</button>
+</main>
+
+<footer>
+    <p>Fone/Whats: (53) 99189-2924</p>
+    <p>E-mail: cncursoshomologados@gmail.com</p>
+    <p>CNPJ: 54.555.171/0001-06</p>
+</footer>
+
+</body>
 </html>

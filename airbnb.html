@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30;url=https://www.airbnb.com.br/h/ap501-pelotas">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP501 Pelotas</title>
+    <style>
+        /* Estilo da página */
+        body {
+            background-color: white;
+            text-align: center;
+            padding: 20px; /* Margens laterais */
+        }
+
+        /* Estilo da imagem airbnb.png com altura de 30px */
+        img#airbnb {
+            height: 50px; /* Altura de 30px */
+            width: auto; /* Mantém a proporção */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            max-width: 100%; /* Ajusta a largura para caber em telas menores */
+        }
+
+        /* Estilo para a imagem ap501.jpg */
+        img#ap501 {
+            height: 400px; /* Mantém a proporção de 50% da tela */
+	    width: auto; /* Largura automática*/
+            display: block;
+            margin: 20px auto; /* Centraliza a imagem e adiciona margem */
+        }
+
+        /* Estilo para o texto */
+        p {
+            font-size: 1.5rem; /* Ajusta o tamanho do texto para ser responsivo */
+            margin: 20px; /* Adiciona margem ao redor do texto */
+        }
+
+        /* Estilo para o botão */
+        button {
+            padding: 10px;
+            background-color: #FF5A5F;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2rem; /* Ajusta o tamanho da fonte para ser responsivo */
+            width: 100%; /* O botão preencherá a largura da tela em dispositivos menores */
+            max-width: 300px; /* Limita a largura do botão em dispositivos maiores */
+        }
+
+        button:hover {
+            background-color: #FF8C8F;
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagem superior esquerda chamada airbnb.png -->
+    <img id="airbnb" src="airbnb.png" alt="Airbnb">
+
+    <!-- Imagem ao centro chamada ap501.jpg -->
+    <img id="ap501" src="ap501.jpg" alt="AP501 Pelotas">
+
+    <!-- Texto abaixo da imagem central -->
+    <p>Bem-vindo ao AP501 Pelotas, sua melhor opção de hospedagem na capital nacional do doce! Em instantes você será redirecionado à página de reserva, onde poderá conhecer todas as comodidades oferecidas em nosso apartamento. Aguardamos sua reserva.</p>
+
+    <!-- Botão que leva para a página de reserva -->
+    <button onclick="window.location.href = 'https://www.airbnb.com.br/h/ap501-pelotas';">Ir para página de Reserva</button>
+</body>
+</html>

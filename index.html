@@ -18,6 +18,27 @@
       gtag('config', 'AW-16499017819');
     </script>
 
+    <script>
+    // Função para acionar a tag do Google ao clicar em um botão
+    function triggerGoogleTagOnClick() {
+        // Aciona a conversão ao clicar em qualquer botão
+        gtag('event', 'click', {
+            'event_category': 'Button Click',
+            'event_label': 'Botão',
+            'value': 1
+        });
+    }
+
+    // Adiciona evento de clique a todos os botões para acionar a tag do Google
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(function(button) {
+            button.addEventListener('click', triggerGoogleTagOnClick);
+        });
+    });
+</script>
+
+
     <style>
         /* Estilos gerais */
         body {

@@ -15,10 +15,12 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16499017819"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-16499017819');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'AW-16499017819');
     </script>
 
     <script>
@@ -39,6 +41,12 @@
             button.addEventListener('click', triggerGoogleTagOnClick);
         });
     });
+
+    // Função para alternar a visibilidade do menu no modo móvel
+    function toggleMenu() {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('show');
+    }
     </script>
 
     <style>
@@ -172,6 +180,37 @@
             footer {
                 position: static; /* Evita que o rodapé fique fixo */
             }
+
+            /* Estilo para o menu recolhido (hamburger) */
+            nav {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+                background-color: #FFC010;
+                color: white;
+                border: none;
+                padding: 10px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            .menu-toggle:hover {
+                background-color: #007BFF;
+            }
+
+            /* Mostra o menu quando a classe 'show' é adicionada */
+            nav.show {
+                display: block;
+                position: absolute;
+                top: 50px; /* Abaixo do cabeçalho */
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 10px;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -180,6 +219,8 @@
 
     <header>
         <img src="https://www.cncursoshomologados.com.br/logo.png" alt="Logo">
+        <!-- Botão para alternar a visibilidade do menu no modo móvel -->
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
         <nav>
             <a href="https://cncursoshomologados.mydurable.com/pt/formacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Formação</a>
             <a href="https://cncursoshomologados.mydurable.com/pt/atualizacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Atualização</a>
@@ -207,4 +248,5 @@
     </footer>
 
 </body>
+
 </html>

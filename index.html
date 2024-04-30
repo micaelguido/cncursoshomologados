@@ -12,14 +12,12 @@
     <meta property="og:description" content="Cursos especializados homologados em transporte!">
     <meta property="og:image" content="https://www.cncursoshomologados.com.br/logo2.png">
 
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16499017819"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-16499017819');
     </script>
 
@@ -41,8 +39,7 @@
             button.addEventListener('click', triggerGoogleTagOnClick);
         });
     });
-</script>
-
+    </script>
 
     <style>
         /* Estilos gerais */
@@ -133,7 +130,16 @@
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             padding: 20px;
-            text-align: center;
+            text-align: left;
+            display: flex; /* Alinhar conteúdo do rodapé */
+            justify-content: space-between; /* Espaço entre o conteúdo do rodapé */
+            align-items: center; /* Centraliza verticalmente o conteúdo do rodapé */
+        }
+
+        /* Adicionando estilo para logo2.png no rodapé */
+        footer img {
+            height: 100px; /* Define a altura de logo2.png */
+            float: right; /* Alinha a imagem à direita */
         }
 
         /* Media queries para tornar o layout responsivo */
@@ -185,17 +191,20 @@
 
     <main>
         <h1>Seu Futuro Agora Mesmo!</h1>
-        <p>Na Central Nacional de Cursos Homologados, oferecemos educação de qualidade com cursos especializados em transporte para impulsionar sua carreira de motorista profissional!.</p>
+        <p>Na Central Nacional de Cursos Homologados, oferecemos educação de qualidade com cursos especializados em transporte para impulsionar sua carreira de motorista profissional!</p>
         <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/matricula?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Matricule-se</button>
         <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/homologacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Saiba mais sobre a Homologação</button>
     </main>
 
     <footer>
-        <p>Fone/Whats: (53) 99189-2924</p>
-        <p>E-mail: cncursoshomologados@gmail.com</p>
-        <p>CNPJ: 54.555.171/0001-06</p>
+        <div>
+            <p>Fone/Whats: (53) 99189-2924</p>
+            <p>E-mail: cncursoshomologados@gmail.com</p>
+            <p>CNPJ: 54.555.171/0001-06</p>
+        </div>
+        <!-- Adicionando a imagem logo2.png no rodapé -->
+        <img src="https://www.cncursoshomologados.com.br/logo2.png" alt="Logo 2">
     </footer>
 
 </body>
-
 </html>

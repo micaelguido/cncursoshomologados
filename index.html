@@ -187,6 +187,19 @@
                 display: none;
             }
 
+            /* Mostra o menu quando a classe 'show' é adicionada */
+            nav.show {
+                display: block;
+                position: absolute;
+                top: 50px; /* Abaixo do cabeçalho */
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 10px;
+                text-align: center;
+            }
+
+            /* Exibir o botão de menu apenas em dispositivos móveis */
             .menu-toggle {
                 display: block;
                 background-color: #FFC010;
@@ -200,17 +213,12 @@
             .menu-toggle:hover {
                 background-color: #007BFF;
             }
+        }
 
-            /* Mostra o menu quando a classe 'show' é adicionada */
-            nav.show {
-                display: block;
-                position: absolute;
-                top: 50px; /* Abaixo do cabeçalho */
-                left: 0;
-                width: 100%;
-                background-color: rgba(0, 0, 0, 0.8);
-                padding: 10px;
-                text-align: center;
+        /* Ocultar o botão de menu em telas maiores */
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
             }
         }
     </style>
@@ -233,7 +241,7 @@
 
     <main>
         <h1>Seu Futuro Agora Mesmo!</h1>
-        <p>Na Central Nacional de Cursos Homologados, oferecemos educação de qualidade com cursos especializados em transporte para impulsionar sua carreira de motorista profissional!</p>
+        <p>Na Central Nacional de Cursos Homologados, oferecemos formação e atualização em transporte de forma rápida e prática.</p>
         <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/matricula?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Matricule-se</button>
         <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/homologacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Saiba mais sobre a Homologação</button>
     </main>
@@ -245,7 +253,7 @@
             <p>CNPJ: 54.555.171/0001-06</p>
         </div>
         <!-- Adicionando a imagem logo3.png no rodapé -->
-        <img src="https://www.cncursoshomologados.com.br/logo3.png" alt="Logo 3" style="margin-right: 5%;">
+        <img src="https://www.cncursoshomologados.com.br/logo3.png" alt="Logo 3" style="margin-right: 10%;">
     </footer>
 
 </body>

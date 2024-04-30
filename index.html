@@ -132,8 +132,6 @@
 
         /* Estilo do rodapé */
         footer {
-            position: fixed; /* Ajuste para fixar o rodapé na parte inferior */
-            bottom: 0;
             width: 100%; /* Largura total da página */
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
@@ -142,6 +140,8 @@
             display: flex; /* Alinhar conteúdo do rodapé */
             justify-content: space-between; /* Espaço entre o conteúdo do rodapé */
             align-items: center; /* Centraliza verticalmente o conteúdo do rodapé */
+            position: fixed; /* Mantém o rodapé fixo na parte inferior */
+            bottom: 0;
         }
 
         /* Adicionando estilo para logo3.png no rodapé */
@@ -178,7 +178,8 @@
             }
 
             footer {
-                position: static; /* Evita que o rodapé fique fixo */
+                position: fixed; /* Mantém o rodapé fixo na parte inferior */
+                bottom: 0;
             }
 
             /* Estilo para o menu recolhido (hamburger) */
@@ -244,7 +245,7 @@
             <p>CNPJ: 54.555.171/0001-06</p>
         </div>
         <!-- Adicionando a imagem logo3.png no rodapé -->
-        <img src="https://www.cncursoshomologados.com.br/logo3.png" alt="Logo 3" style="margin-right: 10%;">
+        <img src="https://www.cncursoshomologados.com.br/logo3.png" alt="Logo 3" style="margin-right: 5%;">
     </footer>
 
 </body>

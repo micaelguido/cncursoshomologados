@@ -10,24 +10,13 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16499017819"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-      gtag('config', 'AW-16499017819');
-
-      // Função para acionar evento ao clicar no botão
-      function handleClick() {
-          // Enviar evento ao Google Tag Manager
-          gtag('event', 'click', {
-              'event_category': 'button',
-              'event_action': 'click',
-              'event_label': 'reservation_button'
-          });
-          
-          // Redirecionar para a página de reserva
-          window.location.href = 'https://www.airbnb.com.br/h/ap501-pelotas';
-      }
+        gtag('config', 'AW-16499017819');
     </script>
 
     <style>
@@ -91,6 +80,6 @@
     <p>Bem-vindo ao AP501 Pelotas, sua melhor opção de hospedagem na capital nacional do doce! Em instantes você será redirecionado à página de reserva, onde poderá conhecer todas as comodidades oferecidas em nosso apartamento. Aguardamos sua reserva.</p>
 
     <!-- Botão que leva para a página de reserva -->
-    <button onclick="handleClick();">Ir para página de Reserva</button>
+    <button onclick="window.location.href = 'https://www.airbnb.com.br/h/ap501-pelotas';">Ir para página de Reserva</button>
 </body>
 </html>

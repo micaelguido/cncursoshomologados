@@ -21,32 +21,42 @@
         }
         gtag('js', new Date());
         gtag('config', 'AW-16499017819');
+
+        // Função para acionar a conversão ao carregar a página
+        function triggerConversion() {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16499017819/1234567890' // Substitua pelo ID correto da conversão
+            });
+        }
+
+        // Aciona a conversão assim que a página for carregada
+        document.addEventListener('DOMContentLoaded', triggerConversion);
     </script>
 
     <script>
-    // Função para acionar a tag do Google ao clicar em um botão
-    function triggerGoogleTagOnClick() {
-        // Aciona a conversão ao clicar em qualquer botão
-        gtag('event', 'click', {
-            'event_category': 'Button Click',
-            'event_label': 'Botão',
-            'value': 1
-        });
-    }
+        // Função para acionar a tag do Google ao clicar em um botão
+        function triggerGoogleTagOnClick() {
+            // Aciona a conversão ao clicar em qualquer botão
+            gtag('event', 'click', {
+                'event_category': 'Button Click',
+                'event_label': 'Botão',
+                'value': 1
+            });
+        }
 
-    // Adiciona evento de clique a todos os botões para acionar a tag do Google
-    document.addEventListener('DOMContentLoaded', function() {
-        const buttons = document.querySelectorAll('button');
-        buttons.forEach(function(button) {
-            button.addEventListener('click', triggerGoogleTagOnClick);
+        // Adiciona evento de clique a todos os botões para acionar a tag do Google
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(function(button) {
+                button.addEventListener('click', triggerGoogleTagOnClick);
+            });
         });
-    });
 
-    // Função para alternar a visibilidade do menu no modo móvel
-    function toggleMenu() {
-        const nav = document.querySelector('nav');
-        nav.classList.toggle('show');
-    }
+        // Função para alternar a visibilidade do menu no modo móvel
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
+        }
     </script>
 
     <style>

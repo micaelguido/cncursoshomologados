@@ -13,44 +13,15 @@
     <meta property="og:image" content="https://www.cncursoshomologados.com.br/logo3.png">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16499017819"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'AW-16499017819');
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16499017819"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        // Função para acionar a conversão ao carregar a página
-        function triggerConversion() {
-            gtag('event', 'conversion', {
-                'send_to': 'AW-16499017819/1234567890' // Substitua pelo ID correto da conversão
-            });
-        }
+  gtag('config', 'AW-16499017819');
+</script>
 
-        // Aciona a conversão assim que a página for carregada
-        document.addEventListener('DOMContentLoaded', triggerConversion);
-    </script>
-
-    <script>
-        // Função para acionar a tag do Google ao clicar em um botão
-        function triggerGoogleTagOnClick() {
-            // Aciona a conversão ao clicar em qualquer botão
-            gtag('event', 'click', {
-                'event_category': 'Button Click',
-                'event_label': 'Botão',
-                'value': 1
-            });
-        }
-
-        // Adiciona evento de clique a todos os botões para acionar a tag do Google
-        document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('button');
-            buttons.forEach(function(button) {
-                button.addEventListener('click', triggerGoogleTagOnClick);
-            });
-        });
 
         // Função para alternar a visibilidade do menu no modo móvel
         function toggleMenu() {

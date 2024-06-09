@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Nacional de Cursos Homologados</title>
+    <link rel="icon" href="Favicon.png" type="image/x-icon">
+
+    <meta property="og:title" content="Central Nacional de Cursos Homologados">
+    <meta property="og:description" content="Cursos especializados homologados em transporte!">
+    <meta property="og:image" content="https://www.cncursoshomologados.com.br/logo3.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16598892045"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16598892045');
+    </script>
+    <script>
+        // Função para alternar a visibilidade do menu no modo móvel
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
+        }
+    </script>
+
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1A795D;
+            color: white;
+        }
+
+        header img {
+            height: 80px;
+        }
+
+        /* Estilo de navegação e botão "Conheça os Cursos" */
+        nav a, nav button {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover, header nav button:hover {
+            text-decoration: underline;
+        }
+
+        header nav button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #FFC000;
+            color: black;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+        }
+
+        /* Estilo do corpo principal */
+        main {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-image: url('https://www.cncursoshomologados.com.br/fundo.png');
+            background-size: cover;
+            background-position: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        main h1 {
+            color: #1b3a57;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            color: black;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        main button {
+            padding: 10px 20px;
+            margin: 10px auto; /* centraliza os botões */
+            border: none;
+            background-color: #FFC000;
+            color: black;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            width: auto; /* ajuste a largura dos botões */
+            max-width: 200px; /* largura máxima dos botões */
+        }
+
+        main button:hover {
+            background-color: #e55d00;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            width: 100%;
+            background-color: #1A795D;
+            color: white;
+            padding: 13px; /* reduzido de 20px para 13px */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            box-sizing: border-box;
+        }
+
+        footer img {
+            height: 60px; /* ajusta a altura da imagem */
+            margin-left: auto;
+        }
+
+        footer div {
+            flex: 1;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Media queries para tornar o layout responsivo */
+        @media (max-width: 768px) {
+            header img {
+                height: 50px;
+            }
+
+            header, main, footer {
+                padding: 10px;
+            }
+
+            nav a, nav button {
+                margin: 0 5px;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+
+            main h1 {
+                font-size: 1.8rem;
+            }
+
+            main p {
+                font-size: 1rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            nav.show {
+                display: block;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #1b3a57;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+                background-color: #FFC000;
+                color: white;
+                border: none;
+                padding: 10px;
+                font-size: 1rem;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                position: static;
+            }
+
+            footer img {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://www.cncursoshomologados.com.br/logo.png" alt="Logo">
+    </header>
+
+    <main>
+        <h1>Seu Futuro Agora Mesmo!</h1>
+        <p>Na Central Nacional de Cursos Homologados, oferecemos formação e atualização em transporte de forma rápida e prática.</p>
+        <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/atualizacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Conheça os Cursos de Atualização Aqui</button>
+        <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/homologacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Saiba mais sobre a Homologação</button>
+    </main>
+
+    <footer>
+        <div>
+            <p>Fone/Whats: (53) 99189-2924</p>
+            <p>E-mail: cncursoshomologados@gmail.com</p>
+            <p>CNPJ: 54.555.171/0001-06</p>
+        </div>
+        <img src="https://www.cncursoshomologados.com.br/logo3.png" alt="Logo 3">
+    </footer>
+
+</body>
+
+</html>

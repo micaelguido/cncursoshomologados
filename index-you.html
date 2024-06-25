@@ -59,6 +59,11 @@
         }
 
         /* Estilo de navegação e botão "Conheça os Cursos" */
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
         nav a, nav button {
             color: white;
             text-decoration: none;
@@ -135,8 +140,28 @@
                 height: 50px;
             }
 
+            header, main, footer {
+                padding: 10px;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #1A795D;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 1;
+                padding: 10px 0;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
             nav a, nav button {
-                margin: 0 5px;
+                margin: 10px 0;
             }
 
             .menu-toggle {
@@ -168,6 +193,12 @@
         @media (min-width: 769px) {
             .menu-toggle {
                 display: none;
+            }
+
+            nav {
+                display: flex;
+                position: static;
+                flex-direction: row;
             }
         }
     </style>

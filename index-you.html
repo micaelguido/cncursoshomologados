@@ -15,11 +15,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16598892045"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'AW-16598892045');
+        gtag('config', 'AW-16598892045');
     </script>
 
     <script>
@@ -27,6 +27,11 @@
         function toggleMenu() {
             const nav = document.querySelector('nav');
             nav.classList.toggle('show');
+        }
+
+        // Função para desmutar o vídeo após o início da exibição
+        function handleVideoStart(event) {
+            event.target.unMute();
         }
     </script>
 
@@ -91,6 +96,8 @@
             justify-content: center;
             align-items: center;
             flex: 1;
+            overflow: hidden;
+            position: relative;
         }
 
         main iframe {
@@ -114,6 +121,7 @@
         footer img {
             height: 50px; /* ajusta a altura da imagem */
             margin-left: 20px; /* adiciona margem à esquerda da imagem */
+            margin-right: 50px; /* ajusta a margem à direita */
         }
 
         footer div {
@@ -220,7 +228,7 @@
 
     <main>
         <!-- Janela central para rodar um vídeo do YouTube -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/2A6gIgv8A6U?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2A6gIgv8A6U?autoplay=1&mute=1&enablejsapi=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </main>
 
     <footer>
@@ -233,6 +241,25 @@
         <img src="https://www.cncursoshomologados.com.br/logo3.png" alt="Logo 3">
     </footer>
 
-</body>
+   <script>
+    // Captura o iframe do vídeo do YouTube
+    const player = document.querySelector('iframe');
 
-</html>
+    // Adiciona um evento para escutar o início da exibição do vídeo
+    player.addEventListener('load', function() {
+        // Quando o vídeo estiver carregado, desmute
+        player.contentWindow.postMessage('{"event":"command","func":"mute","args":""}', '*');
+
+        // Adiciona um evento para detectar o início da reprodução do vídeo
+        player.contentWindow.postMessage('{"event":"command","func":"addEventListener","args":["onStateChange","handleVideoStateChange"]}', '*');
+    });
+
+    // Função para lidar com mudanças de estado do vídeo
+    function handleVideoStateChange(event) {
+        // Se o estado do vídeo for "play" (reproduzindo)
+        if (event.data === YT.PlayerState.PLAYING) {
+            // Desmuta o vídeo
+            player.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+        }
+    }
+</script>

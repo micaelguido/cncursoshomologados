@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Nacional de Cursos Homologados</title>
+    <link rel="icon" href="Favicon.png" type="image/x-icon">
+
+    <meta property="og:title" content="Central Nacional de Cursos Homologados">
+    <meta property="og:description" content="Cursos especializados homologados em transporte!">
+    <meta property="og:image" content="https://www.cncursoshomologados.com.br/logo3.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16598892045"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16598892045');
+    </script>
+
+    <script>
+        // Função para alternar a visibilidade do menu no modo móvel
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
+        }
+    </script>
+
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1A795D;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        header img {
+            height: 80px;
+        }
+
+        /* Estilo de navegação e botão "Conheça os Cursos" */
+        nav a, nav button {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover, header nav button:hover {
+            text-decoration: underline;
+        }
+
+        header nav button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #FFC000;
+            color: black;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+        }
+
+        /* Estilo do corpo principal */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+        main iframe {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            width: 100%; /* ajusta a largura do rodapé para 100% */
+            background-color: #1A795D;
+            color: white;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        footer img {
+            height: 50px; /* ajusta a altura da imagem */
+            margin-left: 20px; /* adiciona margem à esquerda da imagem */
+        }
+
+        footer div {
+            flex: 1;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #FFD700; /* cor dourada para o link */
+            text-decoration: none;
+            margin-left: 20px; /* margem à esquerda do link */
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media queries para tornar o layout responsivo */
+        @media (max-width: 768px) {
+            header img {
+                height: 50px;
+            }
+
+            nav a, nav button {
+                margin: 0 5px;
+            }
+
+            .menu-toggle {
+                display: block;
+                background-color: #FFC000;
+                color: white;
+                border: none;
+                padding: 10px;
+                font-size: 1rem;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer img {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            footer a {
+                margin: 10px 0; /* margem superior e inferior para o link */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://www.cncursoshomologados.com.br/logo.png" alt="Logo">
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <nav>
+            <a href="https://cncursoshomologados.mydurable.com/pt/formacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Formação</a>
+            <a href="https://cncursoshomologados.mydurable.com/pt/atualizacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Atualização</a>
+            <a href="https://cncursoshomologados.mydurable.com/pt/homologacao?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Homologação</a>
+            <a href="https://cncursoshomologados.mydurable.com/pt/contact?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc=">Contato</a>
+            <button onclick="window.location.href='https://cncursoshomologados.mydurable.com/pt/matricula?pt=NjYxZDdkNzhkMjk0NmFlMDZiOWU2MmZlOjE3MTQyNDA4MDEuNDI5OnByZXZpZXc='">Conheça os Cursos</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Janela central para rodar um vídeo do YouTube -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2A6gIgv8A6U?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </main>
+
+    <footer>
+        <div>
+            <p>Fone/Whats: (53) 99189-2924</p>
+            <p>E-mail: cncursoshomologados@gmail.com</p>
+            <p>CNPJ: 54.555.171/0001-06</p>
+        </div>
+        <a href="https://www.cncursoshomologados.com.br/privacidade.html">Política de Privacidade</a>
+        <img src="https://www.cncursoshomologados.com.br/logo3.png" alt="Logo 3">
+    </footer>
+
+</body>
+
+</html>

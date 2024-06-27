@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,26 +15,20 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16598892045"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'AW-16598892045');
     </script>
 
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-        // Função para alternar a visibilidade do menu no modo móvel
-        function toggleMenu() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('show');
-        }
-
-        // Função para desmutar o vídeo após o início da exibição
-        function onPlayerReady(event) {
-            event.target.unMute();
-        }
-
+        var player;
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
+                height: '315',
+                width: '560',
                 videoId: 'OYLv6xOmhvA',
                 playerVars: {
                     'autoplay': 1,
@@ -46,9 +39,12 @@
                 }
             });
         }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+            event.target.unMute();
+        }
     </script>
-    
-    <script src="https://www.youtube.com/iframe_api"></script>
 
     <style>
         /* Estilos gerais */
@@ -115,7 +111,7 @@
             position: relative;
         }
 
-        main iframe {
+        main #player {
             max-width: 100%;
             max-height: 100%;
             border: none;
@@ -255,7 +251,5 @@
         <a href="https://www.cncursoshomologados.com.br/privacidade.html">Política de Privacidade</a>
         <img src="https://www.cncursoshomologados.com.br/logo3.png" alt="Logo 3">
     </footer>
-   
 </body>
-
 </html>

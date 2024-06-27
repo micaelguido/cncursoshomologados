@@ -24,42 +24,42 @@
     <!-- YouTube IFrame API -->
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-       <script>
-    var player;
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            height: '315',
-            width: '560',
-            videoId: 'OYLv6xOmhvA',
-            playerVars: {
-                'autoplay': 1,
-                'controls': 1,
-                'enablejsapi': 1,
-                'origin': window.location.origin
-            },
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    }
+        var player;
 
-    function onPlayerReady(event) {
-        event.target.playVideo();  // Inicia o vídeo automaticamente
-    }
-
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING) {
-            // Pode adicionar lógica adicional aqui se necessário
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '315',
+                width: '560',
+                videoId: 'OYLv6xOmhvA', // ID do seu vídeo do YouTube
+                playerVars: {
+                    'autoplay': 1,       // Autoplay ativado
+                    'controls': 1,       // Exibir controles do player
+                    'enablejsapi': 1,    // Habilitar API JavaScript do YouTube
+                    'origin': window.location.origin
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
         }
-    }
 
-    function toggleMenu() {
-        const nav = document.querySelector('nav');
-        nav.classList.toggle('show');
-    }
-</script>
+        function onPlayerReady(event) {
+            event.target.setVolume(100);  // Define o volume para 100 (áudio ativado)
+            event.target.playVideo();    // Inicia o vídeo automaticamente
+        }
 
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                // Lógica adicional quando o vídeo está sendo reproduzido
+            }
+        }
+
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
+        }
+    </script>
 
     <style>
         /* Estilos gerais */
@@ -265,3 +265,4 @@
     </footer>
 </body>
 </html>
+

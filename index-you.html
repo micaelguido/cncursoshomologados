@@ -30,10 +30,11 @@
             player = new YT.Player('player', {
                 height: '315',
                 width: '560',
-                videoId: 'OYLv6xOmhvA', // ID do seu vídeo do YouTube
+                videoId: 'OYLv6xOmhvA', // Substitua pelo ID do seu vídeo do YouTube
                 playerVars: {
-                    'controls': 1,       // Exibir controles do player
-                    'enablejsapi': 1,    // Habilitar API JavaScript do YouTube
+                    'autoplay': 1,       // Inicia automaticamente o vídeo
+                    'controls': 1,       // Exibe controles do player
+                    'enablejsapi': 1,    // Habilita API JavaScript do YouTube
                     'origin': window.location.origin
                 },
                 events: {
@@ -45,12 +46,12 @@
 
         function onPlayerReady(event) {
             event.target.setVolume(100);  // Define o volume para 100 (áudio ativado)
-            event.target.playVideo();    // Inicia o vídeo manualmente após o carregamento completo da página
         }
 
         function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING) {
-                // Lógica adicional quando o vídeo está sendo reproduzido
+            if (event.data == YT.PlayerState.PLAYING && !started) {
+                event.target.setVolume(100);  // Certifica-se de que o áudio está ativado ao iniciar
+                started = true;
             }
         }
 
@@ -267,8 +268,45 @@
         <a href="https://www.cncursoshomologados.com.br/privacidade.html">Política de Privacidade</a>
         <img src="https://www.cncursoshomologados.com.br/logo3.png" alt="Logo 3">
     </footer>
-    
+
     <script>
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '315',
+                width: '560',
+                videoId: 'OYLv6xOmhvA', // Substitua pelo ID do seu vídeo do YouTube
+                playerVars: {
+                    'autoplay': 1,       // Inicia automaticamente o vídeo
+                    'controls': 1,       // Exibe controles do player
+                    'enablejsapi': 1,    // Habilita API JavaScript do YouTube
+                    'origin': window.location.origin
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.setVolume(100);  // Define o volume para 100 (áudio ativado)
+            event.target.playVideo();    // Inicia o vídeo após o carregamento
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !started) {
+                event.target.setVolume(100);  // Certifica-se de que o áudio está ativado ao iniciar
+                started = true;
+            }
+        }
+
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
+        }
+
         // Inicia o vídeo após o carregamento completo da página
         document.addEventListener('DOMContentLoaded', function() {
             onYouTubeIframeAPIReady();

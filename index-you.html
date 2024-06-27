@@ -32,7 +32,6 @@
                 videoId: 'OYLv6xOmhvA',
                 playerVars: {
                     'autoplay': 1,
-                    'mute': 1,
                     'controls': 1,
                     'enablejsapi': 1,
                     'origin': window.location.origin
@@ -46,12 +45,18 @@
 
         function onPlayerReady(event) {
             event.target.playVideo();
+            event.target.unMute();
         }
 
         function onPlayerStateChange(event) {
             if (event.data == YT.PlayerState.PLAYING) {
-                player.unMute();
+                event.target.unMute();
             }
+        }
+
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
         }
     </script>
 
@@ -231,7 +236,6 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <img src="https://www.cncursoshomologados.com.br/logo.png" alt="Logo">

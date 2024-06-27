@@ -24,41 +24,42 @@
     <!-- YouTube IFrame API -->
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '315',
-                width: '560',
-                videoId: 'OYLv6xOmhvA',
-                playerVars: {
-                    'autoplay': 1,
-                    'controls': 1,
-                    'enablejsapi': 1,
-                    'origin': window.location.origin
-                },
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            event.target.playVideo();
-            event.target.unMute();
-        }
-
-        function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING) {
-                event.target.unMute();
+       <script>
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '315',
+            width: '560',
+            videoId: 'OYLv6xOmhvA',
+            playerVars: {
+                'autoplay': 1,
+                'controls': 1,
+                'enablejsapi': 1,
+                'origin': window.location.origin
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
             }
-        }
+        });
+    }
 
-        function toggleMenu() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('show');
+    function onPlayerReady(event) {
+        event.target.playVideo();  // Inicia o vídeo automaticamente
+    }
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+            // Pode adicionar lógica adicional aqui se necessário
         }
-    </script>
+    }
+
+    function toggleMenu() {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('show');
+    }
+</script>
+
 
     <style>
         /* Estilos gerais */

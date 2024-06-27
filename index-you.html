@@ -31,18 +31,27 @@
                 width: '560',
                 videoId: 'OYLv6xOmhvA',
                 playerVars: {
-                    'mute': 0
                     'autoplay': 1,
-                    },
+                    'mute': 1,
+                    'controls': 1,
+                    'enablejsapi': 1,
+                    'origin': window.location.origin
+                },
                 events: {
-                    'onReady': onPlayerReady
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
                 }
             });
         }
 
         function onPlayerReady(event) {
             event.target.playVideo();
-            event.target.unMute();
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                player.unMute();
+            }
         }
     </script>
 
@@ -224,7 +233,6 @@
 </head>
 
 <body>
-
     <header>
         <img src="https://www.cncursoshomologados.com.br/logo.png" alt="Logo">
         <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
@@ -238,7 +246,6 @@
     </header>
 
     <main>
-        <!-- Janela central para rodar um vídeo do YouTube -->
         <div id="player"></div>
     </main>
 

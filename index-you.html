@@ -48,7 +48,11 @@
             event.target.setVolume(100);  // Define o volume para 100 (áudio ativado)
             event.target.playVideo();    // Inicia o vídeo automaticamente
         }
-
+        
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                // Lógica adicional quando o vídeo está sendo reproduzido
+            }
               function toggleMenu() {
             const nav = document.querySelector('nav');
             nav.classList.toggle('show');

@@ -21,51 +21,6 @@
         gtag('config', 'AW-16598892045');
     </script>
 
-    <!-- YouTube IFrame API -->
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        var player;
-
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '315',
-                width: '560',
-                videoId: 'OYLv6xOmhvA', // Substitua pelo ID do seu vídeo do YouTube
-                playerVars: {
-                    'autoplay': 1,       // Inicia automaticamente o vídeo
-                    'controls': 1,       // Exibe controles do player
-                    'enablejsapi': 1,    // Habilita API JavaScript do YouTube
-                    'origin': window.location.origin
-                },
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            event.target.setVolume(100);  // Define o volume para 100 (áudio ativado)
-        }
-
-        function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING && !started) {
-                event.target.setVolume(100);  // Certifica-se de que o áudio está ativado ao iniciar
-                started = true;
-            }
-        }
-
-        function toggleMenu() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('show');
-        }
-
-        // Inicia o vídeo após o carregamento completo da página
-        document.addEventListener('DOMContentLoaded', function() {
-            onYouTubeIframeAPIReady();
-        });
-    </script>
-
     <style>
         /* Estilos gerais */
         body {
@@ -256,7 +211,7 @@
     </header>
 
     <main>
-        <div id="player"></div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OYLv6xOmhvA?si=2MNTKLPIXpipzwv0&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </main>
 
     <footer>
@@ -270,47 +225,10 @@
     </footer>
 
     <script>
-        var player;
-
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '315',
-                width: '560',
-                videoId: 'OYLv6xOmhvA', // Substitua pelo ID do seu vídeo do YouTube
-                playerVars: {
-                    'autoplay': 1,       // Inicia automaticamente o vídeo
-                    'controls': 1,       // Exibe controles do player
-                    'enablejsapi': 1,    // Habilita API JavaScript do YouTube
-                    'origin': window.location.origin
-                },
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            event.target.setVolume(100);  // Define o volume para 100 (áudio ativado)
-            event.target.playVideo();    // Inicia o vídeo após o carregamento
-        }
-
-        function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING && !started) {
-                event.target.setVolume(100);  // Certifica-se de que o áudio está ativado ao iniciar
-                started = true;
-            }
-        }
-
         function toggleMenu() {
             const nav = document.querySelector('nav');
             nav.classList.toggle('show');
         }
-
-        // Inicia o vídeo após o carregamento completo da página
-        document.addEventListener('DOMContentLoaded', function() {
-            onYouTubeIframeAPIReady();
-        });
     </script>
 </body>
 </html>

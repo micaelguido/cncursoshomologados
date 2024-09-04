@@ -108,8 +108,7 @@
             flex-wrap: wrap;
         }
 
-        footer div {
-            flex: 1;
+        footer .info {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -122,9 +121,6 @@
         footer a {
             color: #FFD700;
             text-decoration: none;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
         }
 
         footer a:hover {
@@ -192,17 +188,19 @@
                 text-align: center;
             }
 
-            footer div {
+            footer .info {
                 order: 1;
+                text-align: center;
             }
 
-            footer a {
+            footer button {
                 order: 2;
                 margin: 10px 0;
             }
 
-            footer button {
+            footer a {
                 order: 3;
+                margin-top: 10px;
             }
         }
 
@@ -235,13 +233,13 @@
     </main>
 
     <footer>
-        <div>
+        <div class="info">
             <p>Fone/Whats: (53) 99189-2924</p>
             <p>E-mail: cncursoshomologados@gmail.com</p>
             <p>CNPJ: 54.555.171/0001-06</p>
         </div>
-        <a href="https://www.cncursoshomologados.com.br/privacidade.html">Política de Privacidade</a>
         <button onclick="window.location.href='https://api.whatsapp.com/send/?phone=555391892924&text=Tenho+interesse+em+um+dos+cursos'">Falar pelo Whatsapp</button>
+        <a href="https://www.cncursoshomologados.com.br/privacidade.html">Política de Privacidade</a>
     </footer>
 
     <script>
